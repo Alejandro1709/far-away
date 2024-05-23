@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PropTypes from "prop-types";
 
 function Form({ items, setItems }) {
   const [description, setDescription] = useState("");
@@ -40,3 +41,8 @@ function Form({ items, setItems }) {
 }
 
 export default Form;
+
+Form.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object),
+  setItems: PropTypes.func,
+};

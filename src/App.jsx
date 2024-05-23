@@ -11,7 +11,7 @@ function App() {
     <div className="app">
       <Logo />
       <Form items={items} setItems={setItems} />
-      <PackingList initialItems={items} />
+      <PackingList initialItems={items} onItemsChange={setItems} />
       <Stats initialItems={items} />
     </div>
   );
