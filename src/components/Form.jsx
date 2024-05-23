@@ -17,8 +17,13 @@ function Form({ items, setItems }) {
       packed: false,
     };
 
-    setItems([...items, newItem]);
+    setItems((prevItems) => {
+      const updatedItems = [...prevItems, newItem];
+      localStorage.setItem("items", JSON.stringify(updatedItems));
+      return updatedItems;
+    });
   };
+
   return (
     <form className="add-form" onSubmit={handleSubmit}>
       <h3>What do you need for your trip?</h3>

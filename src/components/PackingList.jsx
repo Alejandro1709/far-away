@@ -5,6 +5,7 @@ function PackingList({ initialItems, onItemsChange }) {
   const handleRemoveItem = (item) => {
     const filtered = initialItems.filter((i) => i.id !== item.id);
     onItemsChange(filtered);
+    localStorage.setItem("items", JSON.stringify(filtered));
   };
 
   return (
