@@ -10,8 +10,6 @@ function App() {
   useEffect(() => {
     const items = JSON.parse(localStorage.getItem("items") || "[]");
 
-    console.log(items);
-
     if (items) {
       setItems(items);
     }
