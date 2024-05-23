@@ -13,7 +13,7 @@ function Form({ items, setItems }) {
     const newItem = {
       id: items.length + 1,
       description,
-      qty,
+      quantity: qty,
       packed: false,
     };
 
